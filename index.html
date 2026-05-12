@@ -3,105 +3,189 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Palimpsest — Audiobook + ebook sync reader</title>
-  <meta name="description" content="Read along to the audiobook. Palimpsest aligns the spoken word to the page, so you can switch between listening and reading without losing your place.">
-  <meta name="theme-color" content="#F4EFE6" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#1B1815" media="(prefers-color-scheme: dark)">
+  <title>Palimpsest — Read along to the audiobook</title>
+  <meta name="description" content="Palimpsest aligns the spoken word to the page. Switch between listening and reading without losing your place.">
+  <meta name="theme-color" content="#0E0C0A">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%238B5A2B'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='20' font-weight='600' fill='%23FBF7EE' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E">
 </head>
 <body>
-  <header class="hero">
-    <div class="monogram" aria-hidden="true">P</div>
-    <h1>Palimpsest</h1>
-    <p class="tagline">Read along to the audiobook. The spoken word stays glued to the page.</p>
-  </header>
+  <!-- Warm gradient blobs in the background -->
+  <div class="blobs" aria-hidden="true">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+  </div>
 
-  <main>
-    <nav class="tabs" role="tablist" aria-label="Install platform">
-      <button role="tab" aria-controls="panel-ios"     aria-selected="true"  id="tab-ios">iOS</button>
-      <button role="tab" aria-controls="panel-macos"   aria-selected="false" id="tab-macos">macOS</button>
-      <button role="tab" aria-controls="panel-android" aria-selected="false" id="tab-android">Android</button>
-      <button role="tab" aria-controls="panel-windows" aria-selected="false" id="tab-windows">Windows</button>
-      <button role="tab" aria-controls="panel-linux"   aria-selected="false" id="tab-linux">Linux</button>
+  <div class="page">
+    <nav class="topbar">
+      <div class="brand">
+        <span class="monogram" aria-hidden="true">P</span>
+        <span class="wordmark">Palimpsest</span>
+      </div>
+      <a class="topbar-link" href="https://github.com/rRexhepi/Palimpsest">Source →</a>
     </nav>
 
-    <section role="tabpanel" id="panel-ios" aria-labelledby="tab-ios">
-      <h2>iPhone &amp; iPad</h2>
-      <p class="req">Requires iOS 17 or later.</p>
-      <a class="cta" href="#" data-link="testflight-ios">Join the TestFlight beta</a>
-      <ol class="steps">
-        <li>Install <a href="https://apps.apple.com/app/testflight/id899247664">TestFlight</a> from the App Store.</li>
-        <li>Tap the invitation link above on your iPhone or iPad.</li>
-        <li>Open the Palimpsest beta and import an audiobook + EPUB.</li>
-      </ol>
-      <p class="muted">App Store listing coming soon.</p>
+    <header class="hero">
+      <div class="pill">
+        <span class="dot"></span>
+        Audiobook + ebook, word-by-word aligned
+      </div>
+
+      <h1>
+        Read along to
+        <br>
+        <span class="gradient-text">the audiobook.</span>
+      </h1>
+
+      <p class="lede">
+        Palimpsest glues the spoken word to the page. Switch between
+        listening and reading at any moment, on any device, without losing
+        your place.
+      </p>
+
+      <a class="cta" href="#install">
+        Get the app
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+      </a>
+    </header>
+
+    <section class="features">
+      <div class="card">
+        <div class="card-icon" aria-hidden="true">⌁</div>
+        <div>
+          <div class="card-title">On-device Whisper alignment</div>
+          <div class="card-desc">Open-source Whisper transcribes your audiobook locally. No cloud upload, no subscription, no microphone access required.</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-icon" aria-hidden="true">⌖</div>
+        <div>
+          <div class="card-title">Tap to jump</div>
+          <div class="card-desc">Tap any word on the page and playback jumps to that moment in the audio. Pause the audio and the page is already where you left off.</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-icon" aria-hidden="true">✦</div>
+        <div>
+          <div class="card-title">Five-color highlights</div>
+          <div class="card-desc">Margin notes and persistent highlights that survive imports, swaps, and re-alignment. Yours, on your device.</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-icon" aria-hidden="true">◐</div>
+        <div>
+          <div class="card-title">Parchment and ink modes</div>
+          <div class="card-desc">A serif-first design system that's at home on a phone at night and an iPad in sunlight. Adaptive light and dark across every platform.</div>
+        </div>
+      </div>
     </section>
 
-    <section role="tabpanel" id="panel-macos" aria-labelledby="tab-macos" hidden>
-      <h2>Mac</h2>
-      <p class="req">Requires macOS 14 (Sonoma) or later. Apple Silicon and Intel.</p>
-      <a class="cta" href="#" data-link="testflight-ios">Join the TestFlight beta</a>
-      <ol class="steps">
-        <li>Palimpsest ships as a Mac Catalyst build &mdash; the same TestFlight invitation works on Mac.</li>
-        <li>Install <a href="https://apps.apple.com/app/testflight/id899247664">TestFlight for Mac</a>.</li>
-        <li>Open the invitation link, then install from TestFlight.</li>
-      </ol>
-      <p class="muted">Mac App Store listing arrives alongside the iOS App Store release.</p>
-    </section>
+    <section id="install" class="install">
+      <h2>Install</h2>
 
-    <section role="tabpanel" id="panel-android" aria-labelledby="tab-android" hidden>
-      <h2>Android</h2>
-      <p class="req">Requires Android 8.0 (Oreo) or later. ARM64, ARMv7, x86_64.</p>
-      <a class="cta disabled" aria-disabled="true" href="#" data-link="play-store">Google Play &mdash; coming soon</a>
-      <a class="cta secondary" href="#" data-link="apk-direct">Download APK directly</a>
-      <ol class="steps">
-        <li>Download the .apk to your phone.</li>
-        <li>Open it; allow installs from your browser when prompted.</li>
-        <li>Launch Palimpsest and grant audio storage permission so the player can find your audiobooks.</li>
-      </ol>
-    </section>
+      <nav class="tabs" role="tablist" aria-label="Install platform">
+        <button role="tab" aria-controls="panel-ios"     aria-selected="true"  id="tab-ios">iOS</button>
+        <button role="tab" aria-controls="panel-macos"   aria-selected="false" id="tab-macos">macOS</button>
+        <button role="tab" aria-controls="panel-android" aria-selected="false" id="tab-android">Android</button>
+        <button role="tab" aria-controls="panel-windows" aria-selected="false" id="tab-windows">Windows</button>
+        <button role="tab" aria-controls="panel-linux"   aria-selected="false" id="tab-linux">Linux</button>
+      </nav>
 
-    <section role="tabpanel" id="panel-windows" aria-labelledby="tab-windows" hidden>
-      <h2>Windows</h2>
-      <p class="req">Requires Windows 10 (1903+) or Windows 11. x64 and ARM64.</p>
-      <a class="cta" href="#" data-link="windows-installer">Download installer</a>
-      <ol class="steps">
-        <li>Install <a href="https://www.gyan.dev/ffmpeg/builds/">ffmpeg</a> (<code>winget install Gyan.FFmpeg</code>).</li>
-        <li>Run the Palimpsest installer.</li>
-        <li>Launch from Start; import an audiobook + EPUB from File &rarr; Import.</li>
-      </ol>
-      <p class="muted">First public build pending Microsoft Store review.</p>
-    </section>
+      <div class="panel-frame">
+        <section role="tabpanel" id="panel-ios" aria-labelledby="tab-ios">
+          <div class="panel-head">
+            <h3>iPhone &amp; iPad</h3>
+            <p class="req">Requires iOS 17 or later</p>
+          </div>
+          <a class="cta primary" href="#" data-link="testflight-ios">Join the TestFlight beta</a>
+          <ol class="steps">
+            <li>Install <a href="https://apps.apple.com/app/testflight/id899247664">TestFlight</a> from the App Store.</li>
+            <li>Tap the invitation link above on your iPhone or iPad.</li>
+            <li>Open the Palimpsest beta and import an audiobook + EPUB.</li>
+          </ol>
+          <p class="muted">App Store listing coming soon.</p>
+        </section>
 
-    <section role="tabpanel" id="panel-linux" aria-labelledby="tab-linux" hidden>
-      <h2>Linux</h2>
-      <p class="req">Tested on Ubuntu 22.04+ and Debian 12+. Other distros should work with the same runtime deps.</p>
-      <a class="cta" href="#" data-link="linux-appimage">Download AppImage</a>
-      <ol class="steps">
-        <li>Install runtime deps:
-          <pre><code>sudo apt install ffmpeg libmpv2 libgtk-3-0</code></pre>
-        </li>
-        <li>Make the AppImage executable and run:
-          <pre><code>chmod +x Palimpsest-*.AppImage
+        <section role="tabpanel" id="panel-macos" aria-labelledby="tab-macos" hidden>
+          <div class="panel-head">
+            <h3>Mac</h3>
+            <p class="req">Requires macOS 14 (Sonoma) or later · Apple Silicon &amp; Intel</p>
+          </div>
+          <a class="cta primary" href="#" data-link="testflight-ios">Join the TestFlight beta</a>
+          <ol class="steps">
+            <li>Palimpsest ships as a Mac Catalyst build — the same TestFlight invite works on Mac.</li>
+            <li>Install <a href="https://apps.apple.com/app/testflight/id899247664">TestFlight for Mac</a>.</li>
+            <li>Open the invitation link, then install from TestFlight.</li>
+          </ol>
+          <p class="muted">Mac App Store listing arrives alongside the iOS App Store release.</p>
+        </section>
+
+        <section role="tabpanel" id="panel-android" aria-labelledby="tab-android" hidden>
+          <div class="panel-head">
+            <h3>Android</h3>
+            <p class="req">Requires Android 8.0 (Oreo) or later · ARM64, ARMv7, x86_64</p>
+          </div>
+          <a class="cta primary disabled" aria-disabled="true" href="#" data-link="play-store">Google Play — coming soon</a>
+          <a class="cta secondary" href="#" data-link="apk-direct">Download APK directly</a>
+          <ol class="steps">
+            <li>Download the .apk to your phone.</li>
+            <li>Open it; allow installs from your browser when prompted.</li>
+            <li>Launch Palimpsest and grant audio storage permission so the player can find your audiobooks.</li>
+          </ol>
+        </section>
+
+        <section role="tabpanel" id="panel-windows" aria-labelledby="tab-windows" hidden>
+          <div class="panel-head">
+            <h3>Windows</h3>
+            <p class="req">Requires Windows 10 (1903+) or Windows 11 · x64 &amp; ARM64</p>
+          </div>
+          <a class="cta primary" href="#" data-link="windows-installer">Download installer</a>
+          <ol class="steps">
+            <li>Install <a href="https://www.gyan.dev/ffmpeg/builds/">ffmpeg</a>: <code>winget install Gyan.FFmpeg</code></li>
+            <li>Run the Palimpsest installer.</li>
+            <li>Launch from Start, then File → Import to add your audiobook and EPUB.</li>
+          </ol>
+          <p class="muted">First public build pending Microsoft Store review.</p>
+        </section>
+
+        <section role="tabpanel" id="panel-linux" aria-labelledby="tab-linux" hidden>
+          <div class="panel-head">
+            <h3>Linux</h3>
+            <p class="req">Tested on Ubuntu 22.04+ and Debian 12+ · x86_64 &amp; ARM64</p>
+          </div>
+          <a class="cta primary" href="#" data-link="linux-appimage">Download AppImage</a>
+          <ol class="steps">
+            <li>Install runtime deps:
+              <pre><code>sudo apt install ffmpeg libmpv2 libgtk-3-0</code></pre>
+            </li>
+            <li>Make the AppImage executable and run:
+              <pre><code>chmod +x Palimpsest-*.AppImage
 ./Palimpsest-*.AppImage</code></pre>
-        </li>
-      </ol>
-      <details class="from-source">
-        <summary>Build from source</summary>
-        <pre><code>git clone https://github.com/rRexhepi/Palimpsest.git
+            </li>
+          </ol>
+          <details class="from-source">
+            <summary>Build from source</summary>
+            <pre><code>git clone https://github.com/rRexhepi/Palimpsest.git
 cd Palimpsest/xplatform
 bash scripts/setup-linux-vm.sh
+source ~/.bashrc
 flutter pub get
 flutter build linux --release
 ./build/linux/x64/release/bundle/palimpsest</code></pre>
-      </details>
+          </details>
+        </section>
+      </div>
     </section>
-  </main>
 
-  <footer>
-    <p>Palimpsest &copy; <span id="year"></span> Rexhep Rexhepi. <a href="https://github.com/rRexhepi/palimpsest-app">Source for this page</a>.</p>
-  </footer>
+    <footer>
+      <div class="brand subtle">
+        <span class="monogram small" aria-hidden="true">P</span>
+        <span class="wordmark">Palimpsest</span>
+      </div>
+      <p>An audiobook + ebook sync reader. <a href="https://github.com/rRexhepi/Palimpsest">Source on GitHub</a>.</p>
+      <p class="copy">© <span id="year"></span> Rexhep Rexhepi.</p>
+    </footer>
+  </div>
 
   <script src="app.js"></script>
 </body>
