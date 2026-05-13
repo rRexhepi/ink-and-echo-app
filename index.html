@@ -85,16 +85,20 @@
       <section role="tabpanel" id="panel-linux" aria-labelledby="tab-linux" hidden>
         <h2>Linux</h2>
         <p class="req">Ubuntu 22.04+, Debian 12+, Pop!_OS, Mint. x86_64.</p>
-        <p><a class="link" href="https://github.com/rRexhepi/palimpsest-app/releases/download/v0.1.0/palimpsest_0.1.0_amd64.deb" data-link="linux-deb">Download the .deb (v0.1.0)</a></p>
-        <ol class="steps">
-          <li>Install the package. Apt pulls in <code>ffmpeg</code>, <code>libmpv2</code>, and <code>zenity</code> automatically.
-            <pre><code>sudo apt install ./palimpsest_0.1.0_amd64.deb</code></pre>
-          </li>
-          <li>Optional: install Calibre for PDF import.
-            <pre><code>sudo apt install calibre</code></pre>
-          </li>
-          <li>Launch from your app menu (search "Palimpsest") or run <code>palimpsest</code> from a terminal.</li>
-        </ol>
+        <p>Two builds. Both ship the same binary; the difference is whether Calibre is pulled in as a dependency.</p>
+
+        <h3>Lite — recommended for most</h3>
+        <p class="muted">EPUB + MOBI import, audiobook + sync. <strong>~80&nbsp;MB installed.</strong> No Calibre.</p>
+        <p><a class="link" href="https://github.com/rRexhepi/palimpsest-app/releases/download/v0.1.0/palimpsest_0.1.0_amd64.deb" data-link="linux-deb-lite">Download palimpsest_0.1.0_amd64.deb</a></p>
+        <pre><code>sudo apt install ./palimpsest_0.1.0_amd64.deb</code></pre>
+
+        <h3>Full — every format</h3>
+        <p class="muted">Adds Calibre as a hard dependency so PDF, AZW3, RTF, DOCX, LIT, FB2 and the rest import out of the box. <strong>~620&nbsp;MB installed</strong> (Calibre brings Python + Qt + WebEngine).</p>
+        <p><a class="link" href="https://github.com/rRexhepi/palimpsest-app/releases/download/v0.1.0/palimpsest-full_0.1.0_amd64.deb" data-link="linux-deb-full">Download palimpsest-full_0.1.0_amd64.deb</a></p>
+        <pre><code>sudo apt install ./palimpsest-full_0.1.0_amd64.deb</code></pre>
+
+        <p class="muted">Launch from your app menu (search "Palimpsest") or run <code>palimpsest</code> from a terminal. The lite build can pick up Calibre later with <code>sudo apt install calibre</code>.</p>
+
         <p class="muted">Other distros: a Flatpak / AppImage build is on the roadmap. For now, build from source.</p>
         <details class="from-source">
           <summary>Build from source</summary>
