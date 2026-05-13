@@ -84,23 +84,22 @@
 
       <section role="tabpanel" id="panel-linux" aria-labelledby="tab-linux" hidden>
         <h2>Linux</h2>
-        <p class="req">Ubuntu 22.04 or later, Debian 12 or later. x86_64 and ARM64.</p>
-        <p><a class="link" href="#" data-link="linux-appimage">Download the AppImage.</a></p>
+        <p class="req">Ubuntu 22.04+, Debian 12+, Pop!_OS, Mint. x86_64.</p>
+        <p><a class="link" href="https://github.com/rRexhepi/palimpsest-app/releases/download/v0.1.0/palimpsest_0.1.0_amd64.deb" data-link="linux-deb">Download the .deb (v0.1.0)</a></p>
         <ol class="steps">
-          <li>Install runtime deps.
-            <pre><code>sudo apt install ffmpeg libmpv2 libgtk-3-0</code></pre>
+          <li>Install the package. Apt pulls in <code>ffmpeg</code>, <code>libmpv2</code>, and <code>zenity</code> automatically.
+            <pre><code>sudo apt install ./palimpsest_0.1.0_amd64.deb</code></pre>
           </li>
-          <li>Make the AppImage executable and run it.
-            <pre><code>chmod +x Palimpsest-*.AppImage
-./Palimpsest-*.AppImage</code></pre>
+          <li>Optional: install Calibre for PDF import.
+            <pre><code>sudo apt install calibre</code></pre>
           </li>
+          <li>Launch from your app menu (search "Palimpsest") or run <code>palimpsest</code> from a terminal.</li>
         </ol>
+        <p class="muted">Other distros: a Flatpak / AppImage build is on the roadmap. For now, build from source.</p>
         <details class="from-source">
           <summary>Build from source</summary>
           <pre><code>git clone https://github.com/rRexhepi/Palimpsest.git
 cd Palimpsest/xplatform
-bash scripts/setup-linux-vm.sh
-source ~/.bashrc
 flutter pub get
 flutter build linux --release
 ./build/linux/x64/release/bundle/palimpsest</code></pre>
