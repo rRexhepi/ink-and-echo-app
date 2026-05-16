@@ -62,13 +62,30 @@
 
       <section role="tabpanel" id="panel-android" aria-labelledby="tab-android" hidden>
         <h2>Android</h2>
-        <p class="req">Android 8.0 or later. ARM64, ARMv7, x86_64.</p>
-        <p><a class="link disabled" aria-disabled="true" href="#" data-link="play-store">Google Play (coming soon).</a> <span class="sep">·</span> <a class="link" href="#" data-link="apk-direct">Download APK.</a></p>
+        <p class="req">Android 8.0 or later.</p>
+
+        <h3>Recommended — arm64</h3>
+        <p class="muted">Any phone made in the last seven years or so. If you're not sure which architecture your device is, it's this one.</p>
+        <p><a class="link" href="https://github.com/rRexhepi/palimpsest-app/releases/download/v0.1.0/palimpsest-0.1.0-android-arm64-v8a.apk" data-link="android-arm64">Download palimpsest-0.1.0-android-arm64-v8a.apk</a> <span class="muted">(61 MB)</span></p>
+
+        <h3>Older 32-bit ARM</h3>
+        <p class="muted">For budget or pre-2017 devices that don't support arm64.</p>
+        <p><a class="link" href="https://github.com/rRexhepi/palimpsest-app/releases/download/v0.1.0/palimpsest-0.1.0-android-armeabi-v7a.apk" data-link="android-armv7">Download palimpsest-0.1.0-android-armeabi-v7a.apk</a> <span class="muted">(50 MB)</span></p>
+
+        <h3>x86_64</h3>
+        <p class="muted">Android emulators and the few Chromebooks that run Android apps natively.</p>
+        <p><a class="link" href="https://github.com/rRexhepi/palimpsest-app/releases/download/v0.1.0/palimpsest-0.1.0-android-x86_64.apk" data-link="android-x86_64">Download palimpsest-0.1.0-android-x86_64.apk</a> <span class="muted">(69 MB)</span></p>
+
+        <h3>Install</h3>
         <ol class="steps">
-          <li>Download the .apk to your phone.</li>
-          <li>Open it and allow installs from your browser when prompted.</li>
-          <li>Launch Palimpsest and grant audio storage permission.</li>
+          <li>Download the .apk on your phone.</li>
+          <li>Open it. Android will ask once to allow installs from the app you downloaded with (usually Chrome or your file manager).</li>
+          <li>Launch Palimpsest and import an audiobook + ebook.</li>
         </ol>
+
+        <p class="muted">Updates: there's no auto-update without Play Store. <a href="https://obtainium.imranr.dev/">Obtainium</a> can watch this page's GitHub releases and prompt for updates the way Play Store does — paste the repo URL <code>https://github.com/rRexhepi/palimpsest-app</code> into Obtainium to subscribe.</p>
+
+        <p class="muted">Google Play listing is on the roadmap.</p>
       </section>
 
       <section role="tabpanel" id="panel-windows" aria-labelledby="tab-windows" hidden>
