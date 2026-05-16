@@ -93,13 +93,27 @@ pre code { color: inherit; }
 .topbar-nav {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 14px;
 }
 .topbar-link {
   font-size: 13px;
   color: var(--ink-muted);
 }
 .topbar-link:hover { color: var(--ink); text-decoration: none; }
+
+.topbar-cta {
+  font-size: 13px;
+  color: var(--accent);
+  padding: 5px 12px;
+  border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent);
+  border-radius: 999px;
+  transition: background 0.15s, border-color 0.15s;
+}
+.topbar-cta:hover {
+  text-decoration: none;
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  border-color: var(--accent);
+}
 
 /* ===== Main ===== */
 main {
