@@ -90,6 +90,11 @@ pre code { color: inherit; }
   font-weight: 500;
   letter-spacing: 0;
 }
+.topbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
 .topbar-link {
   font-size: 13px;
   color: var(--ink-muted);
