@@ -1,8 +1,8 @@
-# palimpsest-app
+# ink-and-echo-app
 
-Public landing page for [Palimpsest](https://github.com/rRexhepi/Palimpsest) — the audiobook + ebook sync reader. Tabbed install instructions for iOS, macOS (Catalyst), Android, Windows, and Linux.
+Public landing page for [Ink and Echo](https://github.com/rRexhepi/InkAndEcho) — the audiobook + ebook sync reader. Tabbed install instructions for iOS, macOS (Catalyst), Android, Windows, and Linux.
 
-Lives at: **https://rrexhepi.github.io/palimpsest-app/**
+Lives at: **https://rrexhepi.github.io/ink-and-echo-app/**
 
 ## Stack
 
@@ -11,7 +11,7 @@ Plain HTML + CSS + a few lines of vanilla JS. No build step, no framework, no de
 ## Layout
 
 - `index.html` — markup, semantic tabs, content per platform
-- `styles.css` — design tokens lifted from the Palimpsest app theme (saddle accent, parchment canvas, serif type stack), with `prefers-color-scheme` dark mode
+- `styles.css` — design tokens lifted from the Ink and Echo app theme (saddle accent, parchment canvas, serif type stack), with `prefers-color-scheme` dark mode
 - `app.js` — tab switching, keyboard nav (arrow keys, Home/End), URL-hash deep linking, auto-select tab by user agent on first visit
 
 ## Updating download links
@@ -19,7 +19,7 @@ Plain HTML + CSS + a few lines of vanilla JS. No build step, no framework, no de
 Each CTA has a `data-link="<key>"` attribute. To wire up a real download:
 
 ```html
-<a class="cta" href="https://example.com/Palimpsest-1.0.0.AppImage" data-link="linux-appimage">Download AppImage</a>
+<a class="cta" href="https://example.com/InkAndEcho-1.0.0.AppImage" data-link="linux-appimage">Download AppImage</a>
 ```
 
 Keys in use:
