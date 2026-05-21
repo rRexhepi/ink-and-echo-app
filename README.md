@@ -24,10 +24,9 @@ Each CTA has a `data-link="<key>"` attribute. To wire up a real download:
 
 Keys in use:
 - `testflight-ios` — TestFlight invite (shared between iOS and macOS tabs)
-- `play-store` — Google Play listing
-- `apk-direct` — direct .apk download
+- `android-arm64`, `android-armv7`, `android-x86_64` — direct .apk downloads
 - `windows-installer` — Windows installer download
-- `linux-appimage` — Linux AppImage download
+- `linux-deb-lite`, `linux-deb-full` — Linux .deb downloads
 
 ## Local preview
 
