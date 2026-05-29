@@ -11,15 +11,15 @@ Plain HTML + CSS + a few lines of vanilla JS. No build step, no framework, no de
 ## Layout
 
 - `index.html` — markup, semantic tabs, content per platform
-- `styles.css` — design tokens lifted from the Ink and Echo app theme (saddle accent, parchment canvas, serif type stack), with `prefers-color-scheme` dark mode
+- `styles.css` — design tokens lifted from the Ink and Echo app theme (saddle accent, parchment canvas, serif type stack). Dark theme only.
 - `app.js` — tab switching, keyboard nav (arrow keys, Home/End), URL-hash deep linking, auto-select tab by user agent on first visit
 
 ## Updating download links
 
-Each CTA has a `data-link="<key>"` attribute. To wire up a real download:
+Each download link carries a `data-link="<key>"` attribute. The markup pattern:
 
 ```html
-<a class="cta" href="https://example.com/InkAndEcho-1.0.0.AppImage" data-link="linux-appimage">Download AppImage</a>
+<a class="link" href="https://github.com/rRexhepi/ink-and-echo-app/releases/download/v0.2.0/ink-and-echo_0.2.0_amd64.deb" data-link="linux-deb-lite">Download ink-and-echo_0.2.0_amd64.deb</a>
 ```
 
 Keys in use:
